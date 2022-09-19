@@ -164,6 +164,11 @@ header .container {
 	height: 100%;
 }
 
+
+header .logo-fest {
+	fill: var(--accentColor);
+}
+
 .main-menu {
 	margin-top: 50px;
 }
@@ -214,6 +219,7 @@ header .container {
 	color: var(--white);
 	background-color: var(--mainColor);
 }
+
 
 .promo-content .title {
 	font-size: 38px;
@@ -677,4 +683,13 @@ footer {
 
 .column-title:active {
 	color: var(--transpWhite);
+}
+
+
+/* Медиа-запросы */
+
+@media (min-width: 600px) {
+	body {
+		background-color: ;
+	}
 }
