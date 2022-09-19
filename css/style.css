@@ -1,0 +1,680 @@
+/* Общие стили (начало) */
+:root {
+	font-size: 14px;
+	--mainColor: #1a1a1a;
+	--accentColor: #EA4646;
+	--brightAccentColor: #e51a1a;
+	--darkAccentColor: #b71515;
+	--white: #fff;
+	--transpWhite: rgba(250, 250, 250, 0.8);
+}
+
+:focus {
+	outline: 2px solid var(--darkAccentColor);
+}
+
+body {
+	font-family: "Overpass", sans-serif;
+	font-size: 14px;
+	color: var(--mainColor);
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--mainColor);
+}
+
+a:hover,
+.footer-menu a:hover {
+	color: var(--darkAccentColor);
+	transition: all 500ms;
+}
+
+a:active,
+.footer-menu a:active {
+	color: var(--brightAccentColor);
+	transition: all 500ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+h2 {
+	margin-top: 100px;
+}
+
+h3 {
+	font-size: 26px;
+}
+
+.hidden {
+	display: none !important;
+}
+
+
+.container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	max-width: 1440px;
+	margin: auto;
+}
+
+.title {
+	margin-bottom: 50px;
+	text-align: center;
+	font-family: "Roboto slab", serif;
+	font-size: 32px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.btn {
+	padding: 15px 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	transition: all 500ms;
+}
+
+.link-more {
+	color: var(--accentColor);
+	padding-right: 35px;
+}
+
+a.btn-cta {
+	color: var(--white);
+	background-color: var(--accentColor);
+}
+
+.btn-cta:hover {
+	background-color: var(--darkAccentColor);
+}
+
+.btn-cta:active {
+	background-color: var(--brightAccentColor);
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+
+	color: var(--accentColor) !important;
+}
+
+.date strong {
+	font-size: 20px;
+}
+
+.date em {
+	font-size: 14px;
+}
+
+.icon {
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+
+.link-more.icon {
+	background-position: right center;
+}
+
+.icon-geo {
+	background-image: url("../img/icon-geo.svg");
+}
+
+.icon-time {
+	background-image: url("../img/icon-time.svg");
+}
+
+.icon-arrow {
+	background-image: url("../img/icon-arrow.svg");
+}
+
+
+/* Общие стили (конец) */
+
+
+/* Header */
+
+
+.btn-menu {
+	display: none;
+}
+
+header {
+	height: 124px;
+}
+
+header .container {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.main-menu {
+	margin-top: 50px;
+}
+
+.main-menu ul {
+	display: flex;
+	min-width: 484px;
+	justify-content: space-between;
+}
+
+.main-menu a {
+	font-family: "Roboto Slab", serif;
+	font-weight: 500;
+	font-size: 12px;
+
+	text-transform: uppercase;
+}
+
+/* Header (конец) */
+
+/* Promo */
+
+.promo {
+	height: 600px;
+
+	background-image: url("../img/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 64%;
+}
+
+.promo .container {
+	align-items: flex-start;
+	padding: 60px 125px;
+}
+
+.promo-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.promo-content .title,
+.promo-content p {
+	margin-bottom: 5px;
+	padding: 5px 20px;
+
+	color: var(--white);
+	background-color: var(--mainColor);
+}
+
+.promo-content .title {
+	font-size: 38px;
+}
+
+.promo-content p {
+	font-size: 20px;
+}
+
+.promo-content .date {
+	margin-bottom: 40px;
+	background-color: var(--transpWhite);
+}
+
+/* Promo (конец) */
+
+/* About-fest (начало) */
+
+.about-fest .container {
+	padding-bottom: 100px;
+}
+
+.about-fest .title {
+	text-align: center;
+}
+
+.about-fest-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-fest-content h3 {
+	margin-bottom: 10px;
+	font-size: 26px;
+}
+
+.about-fest-content .contacts,
+.about-fest-content .info,
+.about-fest-content .members {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about-fest .contacts {
+	height: 270px;
+}
+
+.contacts .date,
+.contacts .address {
+	margin-bottom: 15px;
+}
+
+.contacts .time {
+	margin-bottom: 30px;
+}
+
+.contacts strong {
+	margin-bottom: 12px;
+}
+
+.contacts em {
+	font-style: normal;
+	color: var(--mainColor);
+}
+
+.address a,
+.time b {
+	padding-left: 30px;
+	line-height: 140%;
+}
+
+.address a {
+	color: var(--mainColor);
+}
+
+.time b {
+	display: block;
+	color: #58595c;
+}
+
+.time span {
+	display: block;
+	padding-left: 30px;
+}
+
+.about-fest-content .info {
+	box-sizing: border-box;
+	justify-content: space-between;
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 730px;
+
+	box-shadow: inset 1px 0 0 var(--mainColor);
+}
+
+.info p,
+.members ul {
+	list-style-position: inside;
+	margin-bottom: 26px;
+	line-height: 140%;
+}
+
+.members ul {
+	list-style-type: disc;
+}
+
+/* About-fest (конец) */
+
+/* SLIDER */
+
+.slider {
+	background-color: grey;
+}
+
+.exhibits {
+	display: flex;
+	/* margin: 0 auto; */
+	flex-direction: column;
+	align-items: center;
+}
+
+.exhibits p {
+	max-width: 850px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.wrapper {
+	/* display: flex;
+	flex-direction: row; */
+	max-width: 1010px;
+	max-height: 615px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	align-items: center;
+	/* padding: 0 30px; */
+}
+
+.wrapper img {
+	max-width: 100%;
+	padding: 0 60px;
+	/* margin: 0 50px; */
+}
+
+/* .multiple-items {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100vw;
+} */
+
+
+
+/* EVENTS */
+
+.events {
+	background-color: #F2F2F2;
+}
+
+.events-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 100px;
+}
+
+.events-schedule {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.events-lectures {
+	width: 25%;
+	background-color: #fff;
+	/* margin-bottom: 197px; */
+}
+
+.lectures-dates {
+	padding-left: 30px;
+	padding-right: 25px;
+	/* padding-bottom: 25px; */
+}
+
+.events-mk {
+	width: 75%;
+	margin-left: 10px;
+}
+
+.events-lectures h4 {
+	color: var(--accentColor);
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+
+.events-lectures span {
+	font-weight: 700;
+	line-height: 140%;
+}
+
+.event-macter {
+	color: #58595C;
+}
+
+.lectures-dates ul {
+	line-height: 148%;
+}
+
+.mk-date,
+.mk-text {
+	line-height: 140%;
+}
+
+.lectures-dates ul {
+	padding-left: 0;
+	margin-bottom: 67px;
+}
+
+.events-lectures li {
+	margin-bottom: 20px;
+
+}
+
+.events-lectures h3 {
+	margin-bottom: 30px;
+}
+
+.events-title {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 30px;
+	padding-right: 226px;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 120%;
+	background-color: var(--mainColor);
+	color: var(--white);
+}
+
+.events-mk h3 {
+	padding-right: 835px;
+}
+
+.mk-schedule {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-height: 556px;
+
+}
+
+.mk-items {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	justify-content: space-between;
+	/* height: 510px; */
+	/* background-color: #fff; */
+	/* align-items: flex-start; */
+
+}
+
+.mk-content {
+	display: flex;
+	flex-direction: row;
+	padding-top: 10px;
+	background-color: #fff;
+}
+
+.mk-date {
+	padding: 10px 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color: var(--white);
+	background-color: var(--mainColor);
+	text-align: center;
+}
+
+.mk-date,
+.mk-text h4 {
+	font-weight: 700;
+}
+
+.mk-text {
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+}
+
+.mk-text h4 {
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.mk-date-main {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	padding-left: 10px;
+	line-height: 50%;
+}
+
+.mk-decor {
+	background-repeat: no-repeat;
+	min-height: 190px;
+}
+
+.mk-pic-1 {
+	background-image: url("../img/mk_1.jpg");
+	background-size: auto 230%;
+	background-position: 25% 65%;
+}
+
+.mk-pic-2 {
+	background-image: url("../img/mk_2.jpg");
+	background-size: auto 215%;
+	background-position: 50% 50%;
+}
+
+.mk-pic-main {
+	background-image: url("../img/mk_3.jpg");
+	background-repeat: no-repeat;
+	min-height: 476px;
+	background-size: auto 295%;
+	background-position: 50% 61%;
+}
+
+.mk-date-main h4 {
+	font-size: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PARTNERS */
+
+.partners-img {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+
+/* FOOTER */
+
+footer {
+	height: 357px;
+	background-color: #272727;
+}
+
+.footer-menu,
+.footer-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer-menu {
+	margin-top: 60px;
+}
+
+.footer-menu a,
+.copyright {
+	color: var(--white);
+}
+
+.footer-items {
+	width: 30%;
+}
+
+.footer-columns {
+	width: 57%;
+
+}
+
+.footer-logos svg {
+	margin-bottom: 25px;
+}
+
+.social-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 120px;
+	margin-bottom: 70px;
+}
+
+.copyright {
+	padding-top: 10px;
+	max-width: 380px;
+	font-weight: 400;
+	line-height: 140%;
+
+	box-shadow: inset 0 1px 0 0 rgba(250, 250, 250, 0.3);
+}
+
+.logo-fest,
+.social-icon,
+.column-title {
+		transition: all 500ms;
+}
+
+.logo-fest,
+.social-icon {
+	fill: var(--white);
+}
+
+.logo-fest {
+	width: 120px;
+	height: 45px;
+}
+
+.social-icon {
+	width: 31px;
+	height: 31px;
+}
+.logo-fest:hover, .social-icon:hover {
+	fill: var(--darkAccentColor);
+}
+
+.logo-fest:active, .social-icon:active {
+	fill: var(--brightAccentColor);
+}
+
+
+.column-list h3 {
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 120%;
+	color: var(--accentColor);
+	text-transform: uppercase;
+}
+
+.column-list ul {
+	padding-left: 0;
+
+}
+
+.column-list li {
+	line-height: 23px;
+}
+
+.column-title:hover {
+	color: var(--white);
+}
+
+.column-title:active {
+	color: var(--transpWhite);
+}
