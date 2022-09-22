@@ -16,11 +16,29 @@ $(document).ready(function(){
 
 			effect: 'fade',
 
-			breakpoints: {
-				1439: {
-					
-				}
-			}
+			// breakpoints: {
+
+			// 	1439: {
+			// 		Width: 1010,
+
+			// 	}
+
+
+			// 	767: {
+			// 	Width: 850,
+			// 	},
+
+			// 	360: {
+			// 		Width: 766,
+			// 	},
+
+				// 360: {
+				// 	width: 766,
+				// 	},
+	//}
+
+
+			
 
 	});
 
