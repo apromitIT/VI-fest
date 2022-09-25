@@ -799,7 +799,6 @@ footer {
 
 .footer-columns {
 	width: 57%;
-
 }
 
 .footer-logos svg {
@@ -1103,12 +1102,123 @@ display: none;
 ==================== */
 
 .partners-img {
-	/* display:inline-block; */
-	/* max-width: 11%; */
-	flex-wrap: wrap;
+	display:inline-block;
+	padding-left: 55px;
+	margin: 0 auto;
+	line-height: 100px;
+	vertical-align: bottom;
+	text-align: justify;
+	justify-content: end;
+}
+
+.partners-img img {
+	margin-right: 70px;
+}
+
+ .partners-img :last-child {
+	margin-right: 0px;
+	justify-content: end;
+}
+/*	margin-left: 50px;
+ */
+
+
+
+.logo-kks {
+	width: 66px;
+}
+
+.logo-museum {
+	width: 97px;
+}
+
+.logo-orkd {
+	width: 153px;
+	
+}
+
+.logo-skg {
+	width: 73px;
+}
+
+.logo-bm {
+	width: 170px;
+}
+
+.logo-perfection {
+	width: 147px;
 }
 
 
+/* FOOTER
+=================== */
+
+footer {
+	height: auto;
+}
+
+.footer-menu {
+	flex-direction: column-reverse;
+	margin-top: 30px;
+}
+
+.footer-columns {
+	width: 100%;
+	padding-left: 65px;
+	padding-right: 65px;
+	margin-bottom: 60px;
+}
+
+.footer-items {
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+.footer-logos {
+	display: flex;
+	flex-direction: column;
+align-items: center;
+
+	/* margin-left: auto;
+	margin-right: auto; */
+}
+
+.footer-logos svg {
+	margin-bottom: 0;
+}
+
+.logo-fest {
+	width: 100px;
+	height: 38px;
+
+}
+
+.footer-items .social-links {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.copyright p {
+	/* display: inline-block; */
+}
+
+.copyright {
+	padding-top: 20px;
+	max-width: 587px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+}
+
+.column-list li {
+	line-height: 19px;
+	
+}
+
+.column-list h3 {
+	margin-bottom: 5px;
+}
 
 
 
@@ -1415,7 +1525,72 @@ width: 100%;
 	margin-bottom: 30px;
 }
 
+/* Partners
+==================== */
+.partners-img {
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 20px;
+	line-height: 95px;
+	vertical-align: bottom;
+	text-align: justify;
+}
 
+.partners-img img {
+	margin-right: 10px;
+}
+
+
+.logo-orkd {
+	width: 109px;
+}
+
+.logo-skg {
+	width: 60px;
+}
+
+.logo-bm {
+	width: 138px;
+	margin-right: 0px;
+}
+
+.partners-img .logo-perfection {
+	width: 108px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+
+/* Footer
+==================== */
+
+.footer-menu {
+	margin-top: 50px;
+}
+
+.footer-columns {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.column-list {
+	margin-bottom: 20px;
+}
+
+.column-list.list-events {
+	display: none;
+}
+
+.copyright {
+	max-width: 294px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
 
 
 }

@@ -6,102 +6,140 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Формы и знакомство с Bootstrap</title>
-	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
+	<h1>Формы в HTML5</h1>
 
-	<h1>Формы в HTML-5</h1>
+	<form action="#" method="post" enctype="text/plain">
+		<fieldset>
+			<legend>Основная информация</legend>
+			<div class="form-group">
+				<label for="first_Name">Имя: </label>
+				<input type="text" id="first_Name" name="firstName" placeholder="Алексей" required accesskey="n">
+			</div>
 
+			<div class="form-group">
+				<label for="phone">Номер: </label>
+				<input type="tel" id="phone" name="phone" placeholder="+7(999) 123-45-67" required accesskey="p">
+			</div>
 
-	<!-- # путь к файлу с формой -->
-	<form action="#" method="get" enctype="text/plain" class="row g-3">
-		<div class="col-md-3">
-			<label for="" class="form-label">Name</label>
-			<input class="form-control" type="text" placeholder="Your name" name="firstName" id="first_Name">
+			<div class="form-group">
+				<label for="pswd">Пароль: </label>
+				<input type="password" id="pswd" name="pswd" required>
+			</div>
+
+			<div class="form-group">
+				<label>Хобби: </label>
+
+				<input type="checkbox" id="hobbi_f" name="hobbi" value="football" checked disabled>
+				<label for="hobbi_f">Футбол</label>
+
+				<input type="checkbox" id="hobbi_g" name="hobbi" value="games">
+				<label for="hobbi_g">Игры</label>
+
+				<input type="checkbox" id="hobbi_ch" name="hobbi" value="chess" checked>
+				<label for="hobbi_ch">Шахматы</label>
+			</div>
+
+			<div class="form-group">
+				<label>Пол: </label>
+
+				<input type="radio" id="sex_m" name="sex" value="m" checked>
+				<label for="sex_m">Мужской</label>
+
+				<input type="radio" id="sex_w" name="sex" value="w">
+				<label for="sex_w">Женский</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Дополнительно</legend>
+			<div class="form-group">
+				<label for="country">Страна: </label>
+
+				<select name="country" id="country" required>
+					<option value="">Выберите страну: </option>
+					<optgroup label="СНГ">
+						<option value="ru">Россия</option>
+						<option value="kz">Казахстан</option>
+						<option value="by">Белоруссия</option>
+					</optgroup>
+					<optgroup label="Евросоюз">
+						<option value="it">Италия</option>
+						<option value="gr">Греция</option>
+					</optgroup>
+				</select>
+
+				<input list="editedCountry" name="editedCountry">
+				<datalist id="editedCountry">
+					<option value="Франция"></option>
+					<option value="Испания"></option>
+					<option value="Бельгия"></option>
+				</datalist>
+			</div>
+
+			<div class="form-group">
+				<label for="range">Ползунок: </label>
+				<label>0</label>
+				<input type="range" id="range" name="range" min="0" max="100" step="25" value="25">
+				<label>100</label>
+				<input type="number" id="num" name="num" min="0" max="100" step="25" value="0">
+				<input type="color" name="color" id="color" value="#ffff00">
+			</div>
+		</fieldset>
+
+		<div class="form-group buttons">
+			<button class="btn-reset" type="reset">Сброс</button>
+			<button class="btn-submit" type="submit">Отправить</button>
+			<button class="btn-open" type="button" onclick="alert('Привет!')">Открыть окно</button>
 		</div>
-
-		<div class="col-md-3">
-			<label for="phone" class="form-label">Phone number</label>
-			<input class="form-control" type="tel" placeholder="+7 (999) 123-45-67" name="phone" id="">
-		</div>
-		
-		<div class="col-md-3">
-			<label for="pswd" class="form-label">Password</label>
-			<input class="form-control" type="password" required name="password" id="password">
-		</div>	
-
-		<div class="form-group mb-3">
-			<label for="hobbi_f" class="form-check-label">Футбол</label>
-			<input type="checkbox" name="hobbi" id="hobbi_f" value="football" class="form-check-input">
-		</div>
-
-    <div class="form-group">
-      <label>Ваше хобби: </label>
-
-      <input type="checkbox" id="hobbi_f" name="hobbi" value="football" checked disabled>
-      <label for="hobbi_f">Футбол</label>
-
-      <input type="checkbox" id="hobbi_g" name="hobbi" value="games">
-      <label for="hobbi_g">Игры</label>
-
-      <input type="checkbox" id="hobbi_ch" name="hobbi" value="chess" checked>
-      <label for="hobbi_ch">Шахматы</label>
-    </div>
-
-    <div class="form-group">
-      <label>Пол: </label>
-
-      <input type="radio" id="sex_m" name="sex" value="m" checked>
-      <label for="sex_m">Мужской</label>
-
-      <input type="radio" id="sex_w" name="sex" value="w">
-      <label for="sex_w">Женский</label>
-    </div>
-
-    <div class="form-group">
-      <label for="country">Страна: </label>
-
-      <select name="country" id="country" required>
-        <option value="">Выберите страну: </option>
-        <optgroup label="СНГ">
-          <option value="ru">Россия</option>
-          <option value="kz">Казахстан</option>
-          <option value="by">Белоруссия</option>
-        </optgroup>
-        <optgroup label="Евросоюз">
-          <option value="it">Италия</option>
-          <option value="gr">Греция</option>
-        </optgroup>
-      </select>
-
-      <input list="editedCountry" name="editedCountry">
-      <datalist id="editedCountry">
-        <option value="Франция"></option>
-        <option value="Испания"></option>
-        <option value="Бельгия"></option>
-      </datalist>
-    </div>
-
-    <div class="form-group">
-      <label for="range">Ползунок: </label>
-      <label>0</label>
-      <input type="range" id="range" name="range" min="0" max="100" step="25" value="25">
-      <label>100</label>
-      <input type="number" id="num" name="num" min="0" max="100" step="25" value="0">
-      <input type="color" name="color" id="color" value="#ffff00">
-    </div>
-
-    <button type="reset">Сброс</button>
-    <button type="submit">Отправить</button>
-    <button type="button" onclick="alert('Привет!')">Открыть окно</button>
-
-
-
 	</form>
 
+	<div class="accordion" id="accordionExample">
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingOne">
+				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					Элемент аккордеона #1
+				</button>
+			</h2>
+			<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<strong>Это тело аккордеона первого элемента.</strong> Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingTwo">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					Элемент аккордеона #2
+				</button>
+			</h2>
+			<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingThree">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					Элемент аккордеона #3
+				</button>
+			</h2>
+			<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>
