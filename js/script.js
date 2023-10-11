@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	$('.btn-menu.icon-menu').click(function () {
+		$('.main-menu').toggleClass('_open')
+		$(this).toggleClass('_open')
+		$(this).toggleClass('icon-menu')
+		$(this).toggleClass('icon-close')
+	})
 
 	new Swiper(".fest-slider", {
 		navigation: {
@@ -15,31 +21,6 @@ $(document).ready(function(){
 			loop: true,
 
 			effect: 'fade',
-
-			// breakpoints: {
-
-			// 	1439: {
-			// 		Width: 1010,
-
-			// 	}
-
-
-			// 	767: {
-			// 	Width: 850,
-			// 	},
-
-			// 	360: {
-			// 		Width: 766,
-			// 	},
-
-				// 360: {
-				// 	width: 766,
-				// 	},
-	//}
-
-
-			
-
 	});
 
 });
